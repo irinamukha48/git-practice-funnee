@@ -1,4 +1,4 @@
-// Example class for Git exercise
+/ Example class for Git exercise
 // Do not use library functions for any of these
 
 public class Stuff {
@@ -9,7 +9,21 @@ public class Stuff {
 
     // Sorts a list of integers from smallest to largest
     // Build your own - don't use a library sorting method
-    static int[] sort(int[] a);
+	//Lana is responsible for this :'(   
+ static int[] sort(int[] a){
+	for (int i = 0; i < a.length; i++){
+		int smallest = i;
+		for (int b = i+1; b < a.length; b++){
+			if (a[smallest] > a[b]){
+				smallest = b;
+}
+}
+		int placeholder = a[i];
+		a[i] = a[smallest];
+		a[smallest] = placeholder;
+}
+	return a;
+}
 
     // Returns the number of occurances of each letter (ABCD...) in a given string
     static int[] letterCount(String s);
