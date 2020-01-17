@@ -16,7 +16,18 @@ public class Stuff {
 
     // Returns the GCD of two numbers
     // Must use Euclid's algorithm
-    static int gcd(int a, int b);
+    static int gcd(int a, int b) {
+        int X, Y;
+        if (a < b) { // A is bigger, B is smaller
+            X = a;
+            Y = b;
+        } else {
+            X = a;
+            Y = b;
+        }
+        if (Y == 0) return X;
+        else return gcd(Y, X % Y);
+    }
 
     // Returns all prime factors of a number
     static int[] factorize(int a);
