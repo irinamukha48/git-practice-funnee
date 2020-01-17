@@ -47,8 +47,8 @@ public class Stuff {
             X = a;
             Y = b;
         } else {
-            X = a;
-            Y = b;
+            X = b;
+            Y = a;
         }
         if (Y == 0) return X;
         else return gcd(Y, X % Y);
