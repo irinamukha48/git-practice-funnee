@@ -5,7 +5,20 @@ public class Stuff {
 
     // Returns the Fibonnaci sequence's nth number
     // ex. 1, 1, 2, 3, 5, 8 - 2 would be the third number
-    static int fib(int n);
+    // This function was edited by Irina Mukhametzhanova
+    static int fib(int n) {
+    	int n1 = 1;
+	int n2 = 1;
+	int number = 1;
+	if (n > 2) {
+		for (int i = 2; i < n; i++) {
+			number = n1 + n2;
+			n1 = n2;
+			n2 = number;
+		}
+	}
+	return number;
+    };
 
     // Sorts a list of integers from smallest to largest
     // Build your own - don't use a library sorting method
