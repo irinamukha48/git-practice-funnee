@@ -21,4 +21,15 @@ public class Stuff {
     // Returns all prime factors of a number
     static int[] factorize(int a);
 
+	for(int i = 2; i< a; i++) {
+         while(number%i == 0) {
+            System.out.println(i+" ");
+            number = number/i;
+         }
+      }
+      if(a >2) {
+         System.out.println(a);
+      } 
+
+
 }
