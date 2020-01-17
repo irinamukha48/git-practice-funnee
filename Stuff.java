@@ -12,7 +12,19 @@ public class Stuff {
     static int[] sort(int[] a);
 
     // Returns the number of occurances of each letter (ABCD...) in a given string
-    static int[] letterCount(String s);
+   // Alison worked on this
+     static int[] letterCount(String s)
+{
+    String[] abc = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+    int[] count = new int[26];
+    for (int i = 0; i < s.size(); i++) {
+        String char1 = s.substring(i,i+1);
+        for (int j = 0; j < abc.length; j++) {
+            if (abc[j].equals(char1)) count[j]++;
+    }
+    }
+    return count;
+}
 
     // Returns the GCD of two numbers
     // Must use Euclid's algorithm
